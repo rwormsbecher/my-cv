@@ -15,48 +15,200 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 :root {
     font-size: 62.5%;
-    height: 100%;
+
     --bg-color: white;
     --text-color: #333;
-    --page-border-color: red;
-    --aside-bg-color: yellow;
+    --page-border-color: #404040;
+    --primary-color: #fec807;
+    --aside-border: #e6b509;
+    --secondary-color: #404040;
+    font-family: 'Roboto', sans-serif;
 }
 
 body, html {
     height: 100%;
+    min-height: 100%;
     background-color: var(--main-bg-color);
 }
 
 .page-container {
     display: flex;
-    width: 76rem;
+    flex-direction: column;
+    width: 100%;
     margin: 0 auto;
-    border-left: 1px solid var(--page-border-color);
-    border-right: 1px solid var(--page-border-color);
-    height: 100%;
+    min-height: inherit;
 }
 
 aside {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    width: 23rem;
-    padding: 1em;
-    background-color: var(--aside-bg-color);  
-    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);  
+    min-height: inherit;
+    border-right: 1px solid  var(--page-border-color)
 }
 
 
 main {
-    display: inline-flex;
+    display: flex;
     margin: 0;
     width: 100%;
-    background-color: red;
+    padding: 7rem 4em 4rem;
+
 }
 
-.photo-container {
+.photo-containe, figure {
+    display: flex;
+    width: 100%;
+    height: 16rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 0;
+
+}
+
+.photo-container figure img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;;
+    width: 60%;
+    border: 1px solid  var(--secondary-color);
+}
+
+.aside-content-seperator {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.aside-content-container {
+    display: flex;
+    padding: 2em;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+}
+
+.aside-content__section {
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+.subheader {
+    font-weight: 500;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.hobbies-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.hobbies-wrapper__item-circle {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    margin: 0 .5em;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hobbies-wrapper__item-circle:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    cursor: pointer;
+    
+}
+
+.summary-container {
     display: flex;
     width: 100%;
     height: 100px;
-    background: blue;
+    flex-direction: column;
+}
 
+.summary-container__person-name {
+    font-size: 3.6rem;
+    margin-bottom: .3em;
+    font-weight: 300;
+}
+
+.summary-container__person-name--highlight {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.summary-container__person-job-title {
+    font-size: 1.8rem;
+}
+
+
+
+
+/* media queries */ 
+@media screen and (min-width: 300px) {
+    .photo-container figure img {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .photo-container figure img {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .photo-container figure img {
+        width: 30%;
+    }
+}
+@media screen and (min-width: 650px) {
+    .photo-container figure img {
+        width: 20%;
+    }
+}
+
+
+@media screen and (min-width: 760px) {
+    .page-container {
+        width: 100%;
+        flex-direction: row;
+        border-left: 1px solid var(--page-border-color);
+        border-right: 1px solid var(--page-border-color);
+    }
+    
+    aside {
+        width: 36rem;
+        display: inline-flex;
+    }
+
+    main {
+        display: inline-flex;
+    }
+
+    .photo-container figure img {
+        width: 60%;
+    }
+  }
+
+  
+  @media screen and (min-width: 1200px) {
+  .page-container {
+    width: 96rem;
+  }
 }
