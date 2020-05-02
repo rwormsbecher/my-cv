@@ -1,0 +1,23 @@
+{
+  "name": "my-cv",
+  "version": "1.0.0",
+  "description": "A cv from Rodney Wormsbecher for open classrooms",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwormsbecher/my-cv.git"
+  },
+  "author": "Rodney Wormsbecher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwormsbecher/my-cv/issues"
+  },
+  "homepage": "https://github.com/rwormsbecher/my-cv#readme",
+  "dependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
