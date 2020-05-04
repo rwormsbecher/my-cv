@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/rwormsbecher/my-cv/issues"
   },
-  "homepage": "https://github.com/rwormsbecher/my-cv#readme",
+  "homepage": "https://rwormsbecher.github.io/my-cv",
   "dependencies": {
     "lite-server": "^2.5.4"
   }
