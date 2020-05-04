@@ -18,6 +18,7 @@
   },
   "homepage": "https://rwormsbecher.github.io/my-cv",
   "dependencies": {
+    "css-vars-ponyfill": "^2.3.0",
     "lite-server": "^2.5.4"
   }
 }

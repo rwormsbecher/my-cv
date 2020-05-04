@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
     <title>Open classrooms CV</title>
 </head>
@@ -238,7 +241,24 @@
             </section>
 
         </main>
-        </figure>
+
+
+        <script>
+            cssVars({
+                onlyLegacy: false,
+                // Display transformed CSS
+                onComplete: function (cssText, styleNodes, cssVariables, benchmark) {
+                    var codeElm = document.querySelector('code');
+
+                    // Format CSS (external library)
+                    cssText = css_beautify(cssText);
+
+                    // Update <code> tag with CSS result
+                    codeElm.textContent = cssText;
+                }
+            });
+
+        </script>
 
 </body>
 
