@@ -51,9 +51,11 @@ aside {
 
 main {
     display: flex;
+    flex-direction: column;
     margin: 0;
     width: 100%;
     padding: 7rem 4em 4rem;
+    font-size: 1.4rem;
 
 }
 
@@ -131,19 +133,19 @@ main {
     color: var(--primary-color);
     background: var(--secondary-color);
     cursor: pointer;
-    
 }
 
 .summary-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100px;
-    flex-direction: column;
+    margin-bottom: 5rem;
 }
 
 .summary-container__person-name {
     font-size: 3.6rem;
-    margin-bottom: .3em;
+    margin-bottom: .1em;
     font-weight: 300;
 }
 
@@ -154,9 +156,101 @@ main {
 
 .summary-container__person-job-title {
     font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.summary-container__divider {
+    width: 5rem;
+    margin-top: .2rem;
+    border-bottom:2px solid var(--primary-color);
 }
 
 
+/* overview css styles */
+.overview-header-container {
+    display: flex;
+    flex: 1;
+    height: 4rem;
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.overview-header-container__icon {
+    display: inline-flex;
+    width: 5rem;
+    margin-right: .5rem;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color)
+}
+
+.overview-header-container__title {
+    display: inline-flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.overview-header-container__title h2 {
+    font-size:  2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    ;
+}
+
+.overview-table-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.overview-table-container__dates {
+    display: inline-flex;
+    min-width: 12rem;
+    margin-right: 3rem;
+}
+
+.overview-table-container__dates ul {
+    margin: 0 0 3rem 0 ;
+    padding: 0;
+}
+
+.overview-table-container__dates li {
+    display: block;
+    list-style: none;
+    margin: 0 0 1rem 0;
+
+}
+
+.overview-table-container__dates-icon {
+    display: inline-flex;
+    font-size: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    width: 14px;
+    margin-right: 1rem;
+    margin-top: 6px;
+}
+
+.overview-table-container__dates-date-container {
+    display: inline-flex;
+    vertical-align: top;
+    width: calc(100% - 3rem);
+}
+
+.overview-table-container__extract h3 {
+   font-size: 1.8rem;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+
+.overview-table-container__jobtitle {
+    display: block;
+    margin: .5rem 0;
+}
 
 
 /* media queries */ 
@@ -185,6 +279,9 @@ main {
 
 
 @media screen and (min-width: 760px) {
+    .overview-table-container {
+        flex-direction: row;
+    }
     .page-container {
         width: 100%;
         flex-direction: row;
